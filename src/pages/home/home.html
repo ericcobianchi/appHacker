@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar color="bar">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title class="titulo">Home</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content padding class="img">
+
+  <ion-list>
+      <ion-item *ngFor="let personagem of personagens | async" class="card">
+        <ion-card (click)="irParaPerfil(personagem)">
+          <ion-card-content class="card">
+            <ion-row>
+              <!-- <ion-col>
+                  <ion-list >
+                        <ion-item class="fundoFoto">
+                          <img class="foto" src="{{personagem.foto}}">
+                        </ion-item>
+                    </ion-list>
+              </ion-col> -->
+              <ion-col>
+                <p class="nome">Identificação</p>
+                <P class="nomeP">{{personagem.nome}}</P>
+
+                <!-- <p class="nomeP">{{personagem.sobrenome}}</p> -->
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <p class="descricao">{{personagem.motivo}}</p>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="bar">
+    <ion-title>perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="img">
+  <ion-row>
+    <ion-col>
+      <ion-item class="fundoFoto">
+        <img class="foto" src="{{personagem.imagem}}">
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+      <ion-item class="tabelaInfo">
+        <p class="info">Nome:</p>
+        <label class="descricao">{{personagem.nome}}</label>
+      </ion-item>
+      <ion-item class="tabelaInfo">
+        <p class="info">Sobrenome:</p>
+        <label class="descricao">{{personagem.sobrenome}}</label>
+      </ion-item>
+
+      <ion-item class="tabelaInfo">
+        <p class="info">Motivo:</p>
+        <label class="descricao">{{personagem.motivo}}</label>
+      </ion-item>
+      <ion-item class="tabelaInfo">
+        <p class="info">Pena:</p>
+        <label class="descricao">{{personagem.pena}}</label>
+      </ion-item>
+
+
+
+        <ion-item class="tabelaInfo">
+          <p class="info">Atualmente:</p>
+          <label class="descricao">{{personagem.atualmente}}</label>
+        </ion-item>
+
+
+      <ion-col>
+          <button ion-button full color="danger" (click)="mensagemExcluir()" class="btnLixo">
+              <ion-icon class="icones" large name="trash"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col>
+          <button ion-button full class="botao" (click)="editarPerfil(personagem)" class="btnEditar">
+            <ion-icon class="icone" full name="create" ></ion-icon>
+          </button>
+        </ion-col>
+</ion-content>

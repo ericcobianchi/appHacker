@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar color="bar">
+    <button ion-button menuToggle>
+      <ion-icon name="menu">
+      </ion-icon>
+    </button>
+    <ion-title>Cadastro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="img">
+  <form [formGroup]="form" >
+    <ion-row>
+      <ion-col>
+        <ion-list>
+            <ion-icon class="foto" name="md-photos" (click)="buscarImagem()">Colocar Foto</ion-icon>
+          <ion-item class="campoFoto">
+            <img src="{{foto}}">
+          </ion-item>
+        </ion-list>
+
+      <ion-item class="fundoNome">
+        <ion-label floating class="info">
+          Nome:
+        </ion-label>
+        <ion-input type="text" formControlName="nome" class="recebeInfo"></ion-input>
+      </ion-item>
+      <small *ngIf="form.get('nome').hasError ('required') && form.get('nome').touched"
+      ion-text color="danger" class="erroNome">*Campo Obrigatório</small>
+
+      <ion-item class="fundoSobrenome">
+          <ion-label floating class="info">
+            Sobreome:
+          </ion-label>
+          <ion-input type="text" formControlName="sobrenome" class="recebeInfo"></ion-input>
+        </ion-item>
+        <small *ngIf="form.get('sobrenome').hasError('required') && form.get('sobrenome').touched"
+        ion-text color="danger" class="erroSobrenome">*Campo Obrigatório</small>
+
+  </ion-col>
+</ion-row>
+
+      <ion-item class="motivo">
+        <ion-label floating class="info">
+          Motivo:
+        </ion-label>
+        <ion-input type="text" formControlName="motivo" class="recebeInfo"></ion-input>
+      </ion-item>
+      <small *ngIf="form.get('motivo').hasError('required') && form.get('motivo').touched"
+      ion-text color="danger" class="erroMotivo">*Campo Obrigatório</small>
+
+      <ion-item class="pena">
+        <ion-label floating class="info">
+          Pena:
+        </ion-label>
+        <ion-select formControlName="pena" class="recebeInfo">
+            <ion-option value="0-10 anos">0-10 anos</ion-option>
+            <ion-option value="11-40 anos">11-40 anos</ion-option>
+            <ion-option value="41-80 anos">41-80 anos</ion-option>
+            <ion-option value="Maior que 80 anos">Maior que 80 anos</ion-option>
+          </ion-select>
+      </ion-item>
+      <small *ngIf="form.get('pena').hasError('required') && form.get('pena').touched"
+      ion-text color="danger" class="erroPena">*Campo Obrigatório</small>
+
+      <ion-item class="atualmente">
+        <ion-label floating class="info">
+          Atualmente:
+        </ion-label>
+        <ion-input type="text" formControlName="atualmente" class="recebeInfo"></ion-input>
+      </ion-item>
+      <small *ngIf="form.get('atualmente').hasError('required') && form.get('atualmente').touched"
+      ion-text color="danger" class="erroAtualmente">*Campo Obrigatório</small>
+
+
+<ion-row>
+  <button ion-button full (click)="cadastrar()" class="btnCadastrar">Cadastrar</button>
+</ion-row>
+  </form>
+</ion-content>
+

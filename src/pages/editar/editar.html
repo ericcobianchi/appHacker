@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>editar</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="img">
+    <form [formGroup]="form" (submit)="cadastrar()" *ngIf="hackerProxie">
+      <!-- <ion-row>
+        <ion-col>
+          <ion-list>
+                <ion-item >
+                  <img src="{{HackerProxie.imagem}}">
+                </ion-item>
+          </ion-list>
+        </ion-col>
+        </ion-row> -->
+
+      <ion-item class="fundoNome">
+        <ion-label floating class="info">
+          Nome:
+        </ion-label>
+        <ion-input type="text" formControlName="nome" class="recebeInfo"></ion-input>
+      </ion-item>
+
+      <ion-item class="fundoSobrenome">
+        <ion-label floating class="info">
+          Sobrenome:
+        </ion-label>
+        <ion-input type="text" formControlName="sobrenome" class="recebeInfo"></ion-input>
+      </ion-item>
+
+      <ion-item class="motivo">
+        <ion-label floating class="info">
+          Motivo:
+        </ion-label>
+        <ion-input type="text" formControlName="motivo" class="recebeInfo"></ion-input>
+      </ion-item>
+      <ion-item class="pena">
+        <ion-label floating class="info">
+          Pena:
+        </ion-label>
+        <ion-select formControlName="pena" class="recebeInfo">
+            <ion-option value="primeira">0-10 anos</ion-option>
+            <ion-option value="segunda">11-40 anos</ion-option>
+            <ion-option value="terceira">41-80 anos</ion-option>
+            <ion-option value="quarta">Maior que 80 anos</ion-option>
+          </ion-select>
+      </ion-item>
+
+      <ion-item class="atualmente">
+        <ion-label floating class="info">
+          Atualmente:
+        </ion-label>
+        <ion-input type="text" formControlName="atualmente" class="recebeInfo"></ion-input>
+      </ion-item>
+
+
+      <button ion-button full type="submit" class="btnSalvar"> Salvar</button>
+    </form>
+    <button ion-button full color="danger" (click)="cancelar()" class="btnCancelar"> Cancelar</button>
+
+</ion-content>

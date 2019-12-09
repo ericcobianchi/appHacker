@@ -1,0 +1,45 @@
+page-perfil {
+  .img{
+    background-image: url('/assets/imgs/anonymous.jpg');
+    background-size:auto;
+    position: relative;
+  }
+  .btnLixo{
+    position: absolute;
+    border-radius: 10px;
+    top: 7vh;
+    width: 240pt;
+  }
+  .btnEditar{
+    position: absolute;
+    border-radius: 10px;
+    top: 1vh;
+    width: 240pt;
+  }
+  .info{
+    font-size: 13px;
+    text-align: justify;
+    color: green;
+  }
+  .descricao{
+    font-size: 17px;
+    color: green;
+  }
+  .tabelaInfo{
+    background-image: url('/assets/imgs/systemF.png');
+    border-radius: 10px;
+    font-size: 10pt;
+    width: 250pt;
+  }
+  .foto{
+    width: 100pt;
+    height: 80pt;
+  }
+  .fundoFoto{
+    width: 90pt;
+    height: 80pt;
+    background-image: url('/assets/imgs/matrix.jpg');
+
+  }
+
+}

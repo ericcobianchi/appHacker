@@ -1,0 +1,53 @@
+<ion-content padding class="img">
+  <form [formGroup]="formLogin" (submit)="submitFormLogin()">
+
+    <ion-list class="tabela">
+      <ion-item class="email">
+        <ion-label floating>Email</ion-label>
+        <ion-input type="text" formControlName="email"></ion-input>
+      </ion-item>
+      <small *ngIf="formLogin.get('email').hasError('email')&& formLogin.get('email').touched" class="erroEmail"
+        ion-text color="danger">
+        *Campo email é obrigatório</small>
+
+      <ion-item class="senha">
+        <ion-label floating>Senha</ion-label>
+        <ion-input type="password" formControlName="senha"></ion-input>
+      </ion-item>
+      <small *ngIf="formLogin.get('senha').hasError('required')&& formLogin.get('senha').touched" class="erroSenha"
+        ion-text color="danger">*
+        Campo senha é obrigatória</small>
+    </ion-list>
+
+    <ion-row class="bLogar">
+      <ion-col>
+        <button ion-button type="submit" class="btnLogar">Logar</button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <ion-row class="bCadastro">
+    <ion-col>
+      <button ion-button type="submit" class="btnCadastro" (click)="registrarUsuario()">Cadastrar</button>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row class="autenticacao">
+    <ion-col>
+      <ion-item no lines><h2>Logar com:</h2></ion-item>
+      <ion-item no lines>
+        <button ion-button large (click)="logarComFacebook()">
+          <ion-icon class="icones" large name="logo-facebook"></ion-icon>
+        </button>
+        <button>
+          <button ion-button large color="danger" (click)="logarComGmail()">
+            <ion-icon class="icones" large name="logo-google"></ion-icon>
+          </button>
+        </button>
+      </ion-item>
+
+    </ion-col>
+  </ion-row>
+
+</ion-content>

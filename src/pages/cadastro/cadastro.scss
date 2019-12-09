@@ -1,0 +1,100 @@
+page-cadastro {
+  .img{
+    background-image: url('/assets/imgs/matrix.jpg');
+    background-size:cover;
+    position: relative;
+
+  }
+  .motivo{
+    background-image: url('/assets/imgs/systemF.png');
+    position: absolute;
+    top: 32vh;
+    width: 240pt;
+    height: 50pt;
+    text-align: initial;
+  }
+  .erroMotivo{
+    position: absolute;
+    top: 42vh;
+    font-size: 13px;
+  }
+
+  .pena{
+    background-image: url('/assets/imgs/systemF.png');
+    position: absolute;
+    top: 46vh;
+    width: 240pt;
+    height: 50pt;
+    text-align: initial;
+  }
+  .erroPena{
+    position: absolute;
+    top: 56vh;
+    font-size: 13px;
+  }
+
+  .atualmente{
+    background-image: url('/assets/imgs/systemF.png');
+    position: absolute;
+    top: 59vh;
+    width: 240pt;
+    height: 50pt;
+    text-align: initial;
+  }
+  .erroAtualmente{
+    position: absolute;
+    top: 69vh;
+    font-size: 13px;
+  }
+
+  .fundoNome{
+    background-image: url('/assets/imgs/systemF.png');
+    width: 100pt;
+    position: absolute;
+    top: 3vh;
+    right: 1vh;
+  }
+  .erroNome{
+    position: absolute;
+    font-size: 13px;
+    top: 14vh;
+    right: 1vh;
+
+  }
+  .fundoSobrenome{
+    background-image: url('/assets/imgs/systemF.png');
+    width: 100pt;
+    position: absolute;
+    top: 16vh;
+    right: 1vh;
+  }
+  .erroSobrenome{
+    position: absolute;
+    top: 27vh;
+    font-size: 13px;
+    right: 1vh;
+  }
+
+  .recebeInfo{
+    color: green;
+
+  }
+  .btnCadastrar{
+    position: absolute;
+    top: 72vh;
+    border-radius: 15px;
+    width: 240pt;
+  }
+  .foto{
+    color: rgb(10, 195, 10);
+    width: 100pt;
+    font-size: larger;
+
+  }
+  .campoFoto{
+    width: 100pt;
+    background-image: url('/assets/imgs/systemF.png');
+    height: 100pt;
+  }
+
+}

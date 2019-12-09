@@ -1,0 +1,42 @@
+<ion-content padding class="img">
+  <form [formGroup]="formRegistro" (submit)="submitRegistro()">
+
+    <ion-list class="tabela">
+      <ion-item class="email">
+        <ion-label floating>Email</ion-label>
+        <ion-input type="text" formControlName="email"></ion-input>
+      </ion-item>
+      <small class="erroEmail" *ngIf="formRegistro.get('email').hasError('email') && formRegistro.get('email').touched"
+        ion-text color="danger">*Formato inválido
+      </small>
+
+      <ion-item class="senha">
+        <ion-label floating>Senha</ion-label>
+        <ion-input type="password" formControlName="senha"></ion-input>
+      </ion-item>
+      <small class="erroSenha" *ngIf="formRegistro.get('senha').hasError('required') && formRegistro.get('senha').touched"
+        ion-text color="danger">*Campo obrigatório
+      </small>
+
+      <ion-item class="confSenha">
+        <ion-label floating>Confirmar Senha</ion-label>
+        <ion-input type="password" formControlName="confSenha"></ion-input>
+        </ion-item>
+      <small class="erroConfSenha" *ngIf="formRegistro.get('confSenha').hasError('required') && formRegistro.get('confSenha').touched"
+        ion-text color="danger">*Campo obrigatório
+      </small>
+    </ion-list>
+
+    <ion-row>
+      <ion-col>
+        <button class="reg" ion-button full type="submit">Registrar Usuário</button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <ion-row>
+    <ion-col>
+      <button class="voltar" ion-button full (click)="voltar()">Voltar</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

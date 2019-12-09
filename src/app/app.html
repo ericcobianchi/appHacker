@@ -1,0 +1,37 @@
+<div class="sk-cube-grid">
+    <div class="sk-cube sk-cube1"></div>
+    <div class="sk-cube sk-cube2"></div>
+    <div class="sk-cube sk-cube3"></div>
+    <div class="sk-cube sk-cube4"></div>
+    <div class="sk-cube sk-cube5"></div>
+    <div class="sk-cube sk-cube6"></div>
+    <div class="sk-cube sk-cube7"></div>
+    <div class="sk-cube sk-cube8"></div>
+    <div class="sk-cube sk-cube9"></div>
+  </div>
+
+<ion-menu [content]="content" type="overlay">
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="imagem">
+    <ion-list>
+      <button menuClose ion-item (click)="home()" class="imagem">
+        <ion-icon class="icone" name="home"></ion-icon><label class="palavra"> Home</label>
+      </button>
+      <button menuClose ion-item (click)="cadastrar()" class="imagem">
+        <ion-icon class="icone" name="create"></ion-icon><label class="palavra"> Cadastrar</label>
+      </button>
+      <button menuClose ion-item (click)="sair()" class="imagem">
+        <ion-icon class="icone" name="exit"></ion-icon><label class="palavra"> Sair</label>
+      </button>
+  </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
